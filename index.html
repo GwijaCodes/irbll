@@ -23,21 +23,41 @@
     <title>IRBLL.IT</title>
 </head>
 
-<body class="bg-peach">
+<body class="">
     <nav class="fixed flex flex-col w-screen text-center py-4 px-10 md:px-50 lg:px-60 ease-in duration-200">
         <a href="./index.html" class="brand pb-6">IRENE BELLA</a>
         <ul class="flex justify-between text-xs md:text-base">
-            <li>illustrazioni</li>
-            <li>fumetti</li>
-            <li>character design</li>
-            <li>about me</li>
+            <li class="cursor-pointer" onclick="ill()">illustrazioni</li>
+            <li class="cursor-pointer" onclick="fum()">fumetti</li>
+            <li class="cursor-pointer" onclick="char()">character design</li>
+            <li class="cursor-pointer" onclick="about()">about me</li>
         </ul>
     </nav>
-    <div class="flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9">
-        <div class="bg-white h-80 w-10"></div>
-        <div class="bg-white h-80 w-10"></div>
-        <div class="bg-white h-80 w-10"></div>
+    <div class="sections w-auto overflow-x-scroll flex snap-x">
+
+        <div
+            class="illustrazioni flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+        </div>
+        <div class="fumetti flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center">
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+        </div>
+        <div class="char flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-green shrink-0 snap-center">
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+        </div>
+        <div class="about flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-sky shrink-0 snap-center">
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+            <div class="bg-white h-80 w-10"></div>
+        </div>
     </div>
+
 
 
     <script>
@@ -48,6 +68,19 @@
             } else {
                 nav.style.transform = 'translateY(0%)'
             }
+        }
+
+        const ill = () => {
+            document.querySelector('.illustrazioni').scrollIntoView({ behavior: "smooth" })
+        }
+        const fum = () => {
+            document.querySelector('.fumetti').scrollIntoView({ behavior: "smooth" })
+        }
+        const char = () => {
+            document.querySelector('.char').scrollIntoView({ behavior: "smooth" })
+        }
+        const about = () => {
+            document.querySelector('.about').scrollIntoView({ behavior: "smooth" })
         }
     </script>
 </body>
