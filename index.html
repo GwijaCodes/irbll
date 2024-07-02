@@ -25,23 +25,24 @@
 
 <body class="">
     <nav class="fixed flex flex-col w-screen text-center py-4 px-10 md:px-50 lg:px-60 ease-in duration-200">
-        <a href="./index.html" class="brand pb-6">IRENE BELLA</a>
+        <a href="./index.html" class="brand mb-6">IRENE BELLA</a>
         <ul class="flex justify-between text-xs md:text-base">
-            <li class="cursor-pointer" onclick="ill()">illustrazioni</li>
             <li class="cursor-pointer" onclick="fum()">fumetti</li>
+            <li class="cursor-pointer" onclick="ill()">illustrazioni</li>
             <li class="cursor-pointer" onclick="char()">character design</li>
             <li class="cursor-pointer" onclick="about()">about me</li>
         </ul>
     </nav>
-    <div class="sections w-auto overflow-x-scroll flex snap-x">
+    <div class="sections w-auto overflow-x-scroll flex snap-x snap-mandatory">
 
         <div
-            class="illustrazioni flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
+            class="fumetti flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center snap-">
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
-        <div class="fumetti flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center">
+        <div
+            class="illustrazioni flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
@@ -70,7 +71,7 @@
             }
         }
 
-        const ill = () => {
+        const ill = (e) => {
             document.querySelector('.illustrazioni').scrollIntoView({ behavior: "smooth" })
         }
         const fum = () => {
