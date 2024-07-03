@@ -12,7 +12,7 @@
                     colors: {
                         peach: '#F9B59B',
                         green: '#A4D1C0',
-                        sky: '#A6C9DD',
+                        sky: '#88B9E7',
                         dark: '#545E63'
                     }
                 }
@@ -27,7 +27,7 @@
     <nav class="fixed flex flex-col w-screen text-center py-4 px-10 md:px-50 lg:px-60 ease-in duration-200">
         <a href="./index.html" class="brand mb-6">IRENE BELLA</a>
         <ul class="flex justify-between text-xs md:text-base">
-            <li class="cursor-pointer" onclick="fum()">fumetti</li>
+            <li data-section="fumetti" class="cursor-pointer" onclick="fum()">fumetti</li>
             <li class="cursor-pointer" onclick="ill()">illustrazioni</li>
             <li class="cursor-pointer" onclick="char()">character design</li>
             <li class="cursor-pointer" onclick="about()">about me</li>
@@ -36,26 +36,26 @@
     <div class="sections w-auto overflow-x-scroll flex snap-x snap-mandatory">
 
         <div
-            class="fumetti flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center snap-">
-            <div class="bg-white h-80 w-10"></div>
+            class="section fumetti flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center snap-">
+            <img class="bg-white h-80" src="./assets/dad.jfif"/>
+
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
         <div
-            class="illustrazioni flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
-            <div class="bg-white h-80 w-10"></div>
-            <div class="bg-white h-80 w-10"></div>
-            <div class="bg-white h-80 w-10"></div>
-        </div>
-        <div class="char flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-green shrink-0 snap-center">
-            <div class="bg-white h-80 w-10"></div>
+            class="section illustrazioni flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
+            <img class="bg-white h-80" src="./assets/betch.jpg"/>
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
-        <div class="about flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-sky shrink-0 snap-center">
+        <div class="section char flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-green shrink-0 snap-center">
+            <img class="bg-white h-80" src="./assets/bb.png"/>
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
-            <div class="bg-white h-80 w-10"></div>
+        </div>
+        <div class="section about flex flex-col w-full h-auto items-center p-9 pt-40 gap-y-9 bg-sky shrink-0 snap-center">
+            <p class="w-full p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam inventore ullam incidunt perspiciatis ut illo fugiat in rerum, nesciunt, a pariatur! Distinctio laborum eum, velit atque error vero eius.</p>
+            <img class="bg-white h-80" src="./assets/irbll.jpg"/>
         </div>
     </div>
 
@@ -83,6 +83,8 @@
         const about = () => {
             document.querySelector('.about').scrollIntoView({ behavior: "smooth" })
         }
+
+
     </script>
 </body>
 
