@@ -31,44 +31,59 @@
 </head>
 
 <body class="">
-    <nav class="fixed flex flex-col w-screen text-center py-4 px-10 md:px-50 lg:px-60 ease-in duration-200">
-        <a href="./index.html" class="brand marker mb-6">IReNE BeLLa</a>
+    <nav
+        class="fixed flex l  w-screen text-center py-6 px-10 flex-col-reverse md:px-50 lg:px-60 ease-in duration-200 translate-y-[-65%] md:transform-none md:flex-col">
+        <a href="./index.html" class="brand marker my-6">IReNE BeLLa</a>
 
-        <div class="group/hamburger h-6 w-10 fixed right-6 top-4 cursor-pointer md:hidden" onclick="toggleMenu()">
-            <div class="bg-black h-1 w-full rounded absolute top-0  transition duration-600
-            line"></div>
-            <div class="bg-black h-1 w-full rounded absolute top-[100%]
-            transition duration-600 line"></div>
-            <div class="bg-black h-1 w-full rounded absolute top-[50%]
-            transition duration-600
-            line"></div>
-        </div>
-        <ul class="flex justify-between text-xs flex-col gap-4 translate-y-[-200%] transition ease-in-out
-        md:gap-0 md:text-base md:flex-row md:transform-none">
-            <li id="fum" class="active cursor-pointer handwritten" onclick="fum()">fumetti</li>
-            <li id="ill" class="cursor-pointer handwritten" onclick="ill()">illustrazioni</li>
-            <li id="char" class="cursor-pointer handwritten" onclick="char()">character design</li>
-            <li id="about" class="cursor-pointer handwritten" onclick="about()">about me</li>
+
+        <ul class="flex justify-between text-xs flex-col gap-4 transition duration-[1s]
+        md:gap-0 md:text-base md:flex-row md:transform-none md:bg-none">
+            <li id="fum" class="active cursor-pointer handwritten" onclick="fum()">fumetti
+                <img class="scribble h-10 m-auto hidden"
+                    src="https://www.thescribbles.io/images/GIF-under-about-section.gif" alt="scribble navigation">
+            </li>
+            <li id="ill" class="cursor-pointer handwritten" onclick="ill()">illustrazioni
+                <img class="scribble h-10 m-auto hidden"
+                    src="https://www.thescribbles.io/images/GIF-under-about-section.gif" alt="scribble navigation">
+            </li>
+            <li id="char" class="cursor-pointer handwritten" onclick="char()">character design
+                <img class="scribble h-10 m-auto hidden"
+                    src="https://www.thescribbles.io/images/GIF-under-about-section.gif" alt="scribble navigation">
+            </li>
+            <li id="about" class="cursor-pointer handwritten" onclick="about()">about me
+                <img class="scribble h-10 m-auto hidden"
+                    src="https://www.thescribbles.io/images/GIF-under-about-section.gif" alt="scribble navigation">
+            </li>
         </ul>
     </nav>
+    <div class="group/hamburger h-6 w-10 fixed right-6 top-4 cursor-pointer md:hidden" onclick="toggleMenu()">
+        <div class="bg-black h-1 w-full rounded absolute top-0  transition duration-600
+        line"></div>
+        <div class="bg-black h-1 w-full rounded absolute top-[100%]
+        transition duration-600 line"></div>
+        <div class="bg-black h-1 w-full rounded absolute top-[50%]
+        transition duration-600
+        line"></div>
+    </div>
     <div class="sections w-auto overflow-x-hidden flex snap-x">
 
         <div
             class="section fum flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center snap-">
-            <img class="bg-white h-80" src="./assets/dad.jfif" />
+            <img class="bg-white w-[80vh]" src="./assets/dad.jfif" />
+            <p>Dad, 2023</p>
 
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
         <div
             class="section ill flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
-            <img class="bg-white h-80" src="./assets/betch.jpg" />
+            <img class="bg-white w-[80vh]" src="./assets/betch.jpg" />
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
         <div
             class="section char flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-green shrink-0 snap-center">
-            <img class="bg-white h-80" src="./assets/bb.png" />
+            <img class="bg-white w-[80vh]" src="./assets/bb.png" />
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
@@ -123,7 +138,8 @@
 
 
         const toggleMenu = () => {
-            document.querySelector('ul').classList.toggle('translate-y-[-200%]');
+            document.querySelector('nav').classList.toggle('translate-y-[0]');
+            document.querySelector('nav').classList.toggle('bg-white');
 
 
             document.querySelector('.line:nth-of-type(1)').classList.toggle('rotate-[45deg]')

@@ -32,3 +32,7 @@
     font-weight: black;
     font-style: normal;
 }
+
+.active .scribble {
+    display: block;
+}
