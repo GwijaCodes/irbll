@@ -7,8 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Rock+Salt&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="master.css">
     <script>
@@ -28,12 +27,12 @@
     <title>IRBLL.IT</title>
 </head>
 
-<body class="">
+<body class="text-xs md:text-sm lg:text-base">
     <nav role="navigation" aria-label="Main Navigation"
-        class="fixed flex l  w-screen text-center py-2 px-10 flex-col-reverse md:px-50 lg:px-60 ease-in duration-200 translate-y-[-65%] md:transform-none md:flex-col">
-        <a href="./index.html" class="brand marker my-2">IReNE BeLLa</a>
+        class="fixed flex l w-screen text-center py-2 px-10 flex-col-reverse md:px-50 lg:px-60 ease-in duration-200 translate-y-[-65%] md:transform-none md:flex-col">
+        <a href="./index.html" class="brand marker my-2 text-sm md:text-base lg:text-lg">IReNE BeLLa</a>
         <ul class="flex justify-between text-xs flex-col gap-4 transition duration-[1s]
-        md:gap-0 md:text-base md:flex-row md:transform-none md:bg-none">
+        md:gap-0 md:text-sm lg:text-base md:flex-row md:transform-none md:bg-none">
             <li id="fum" class="active cursor-pointer handwritten" onclick="scrollToFum()">fumetti
                 <img class="scribble h-10 m-auto hidden"
                     src="https://www.thescribbles.io/images/GIF-under-about-section.gif" alt="scribble navigation">
@@ -58,28 +57,24 @@
         <div class="bg-black h-1 w-full rounded absolute top-[50%] transition duration-600 line"></div>
     </div>
     <div class="sections w-auto overflow-x-hidden flex snap-x">
-        <div
-            class="section fum flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center snap-">
+        <div class="section fum flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-peach shrink-0 snap-center snap-">
             <img class="bg-white w-[80vh]" src="./assets/dad.jfif" />
-            <p>Dad, 2023</p>
+            <p class="text-xs md:text-sm lg:text-base">Dad, 2023</p>
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
-        <div
-            class="section ill flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
+        <div class="section ill flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-dark shrink-0 snap-center">
             <img class="bg-white w-[80vh]" src="./assets/betch.jpg" />
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
-        <div
-            class="section char flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-green shrink-0 snap-center">
+        <div class="section char flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-green shrink-0 snap-center">
             <img class="bg-white w-[80vh]" src="./assets/bb.png" />
             <div class="bg-white h-80 w-10"></div>
             <div class="bg-white h-80 w-10"></div>
         </div>
-        <div
-            class="section about flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-sky shrink-0 snap-center">
-            <p class="w-full p-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam
+        <div class="section about flex flex-col w-screen h-auto items-center p-9 pt-40 gap-y-9 bg-sky shrink-0 snap-center">
+            <p class="w-full p-10 text-xs md:text-sm lg:text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident quibusdam
                 inventore ullam incidunt perspiciatis ut illo fugiat in rerum, nesciunt, a pariatur! Distinctio laborum
                 eum, velit atque error vero eius.</p>
             <img class="bg-white h-80" src="./assets/irbll.jpg" />
@@ -102,3 +97,5 @@
 </body>
 
 </html>
+
+

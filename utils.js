@@ -1,6 +1,6 @@
 export const clearActive = () => {
   document
-    .querySelectorAll("li.active")
+    .querySelectorAll("nav li")
     .forEach((li) => li.classList.remove("active"));
 };
 
@@ -35,4 +35,24 @@ export const handleScroll = () => {
       nav.style.transform = "translateY(0%)";
     }
   };
+};
+
+export const initNavigation = () => {
+  document.querySelectorAll("nav li").forEach((item) => {
+    item.addEventListener("click", () => {
+      const sectionClass = item.getAttribute("data-section");
+      scrollToSection(sectionClass, item.id);
+    });
+  });
+  handleScroll();
+};
+
+export const openModal = (src, desc) => {
+  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("modalImg").src = src;
+  document.getElementById("modalDesc").textContent = desc;
+};
+
+export const closeModal = () => {
+  document.getElementById("modal").classList.add("hidden");
 };
